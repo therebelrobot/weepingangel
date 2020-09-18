@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+const incli = require('incli');
+const path = require('path');
+const fs = require('fs');
+
+const wa = require('../weepingangel')
+
+// const log = console.log;
+// const respond = console.log;
+
+const commands = {
+  base: {
+    description: 'collect base screenshots (to compare changes against)',
+    options: [],
+    callback: async (args) => {
+      const cwd = process.cwd();
+      return wa.base(cwd)
+    },
+  },
+  compare: {
+    description: 'collect compare screenshots (to compare changes with)',
+    options: [],
+    callback: async (args) => {
+      const cwd = process.cwd();
+      return wa.compare(cwd)
+    },
+  },
+  display: {
+    description: 'build comparison image',
+    options: [],
+    callback: async (args) => {
+      const cwd = process.cwd();
+      return wa.display(cwd)
+    },
+  },
+};
+
+incli(commands);

@@ -1,0 +1,24 @@
+{
+  "name": "weepingangel",
+  "version": "0.0.1",
+  "description": "CLI for automated screenshot comparison, via Blink and Puppeteer",
+  "main": "weepingangel.js",
+  "bin":{
+    "weepingangel": "./bin/weepingangel",
+    "dontblink": "./bin/weepingangel",
+    "wa": "./bin/weepingangel",
+    "db": "./bin/weepingangel"
+  },
+  "repository": "ssh://git@github.com/therebelrobot/weepingangel.git",
+  "author": "Aster Haven (@therebelrobot) <npm@therebelrobot.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "blink-diff": "1.0.13",
+    "incli": "^0.1.0",
+    "puppeteer": "1.19.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
